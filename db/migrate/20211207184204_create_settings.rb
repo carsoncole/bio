@@ -5,6 +5,7 @@ class CreateSettings < ActiveRecord::Migration[7.0]
       t.string :address
       t.string :email
       t.string :phone
+      t.text :description
       t.boolean :is_available, default: true
 
       t.timestamps
