@@ -1,7 +1,7 @@
 require "test_helper"
 
 class SettingTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "creating a setting" do
+    assert create(:setting)
+  end
 end
