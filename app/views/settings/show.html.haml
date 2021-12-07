@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @setting.name
+%p
+  %b Address:
+  = @setting.address
+%p
+  %b Email:
+  = @setting.email
+%p
+  %b Phone:
+  = @setting.phone
+%p
+  %b Is available:
+  = @setting.is_available
+
+= link_to 'Edit', edit_setting_path(@setting)
+\|
+= link_to 'Back', settings_path
