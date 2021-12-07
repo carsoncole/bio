@@ -1,4 +1,4 @@
-class ExperiencesController < ApplicationController
+class ExperiencesController < InternalController
   before_action :set_experience, only: %i[ show edit update destroy ]
 
   # GET /experiences or /experiences.json
