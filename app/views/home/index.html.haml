@@ -1,1 +1,20 @@
-%h1
+- @experiences.each do |experience|
+  
+  %article
+    %h1= experience.title
+    .name
+      - if experience.url.present?
+        = link_to experience.name, experience.url
+      - else
+        = experience.name
+
+    .description
+      = experience.description
+
+    .period
+      = experience.start_date.strftime('%B %Y')
+      \-
+      - if experience.end_date.present?
+        = experience.end_date.strftime('%B %Y')
+      - else
+        Present

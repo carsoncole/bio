@@ -1,0 +1,11 @@
+header {
+  h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 4em;
+  }
+  .address, .phone, .email {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+}
