@@ -1,19 +1,6 @@
 class ExperiencesController < InternalController
-  before_action :set_experience, only: %i[ show edit update destroy ]
+  before_action :set_experience, only: %i[ edit update destroy ]
 
-  # GET /experiences or /experiences.json
-  def index
-    @experiences = Experience.all
-  end
-
-  # GET /experiences/1 or /experiences/1.json
-  def show
-  end
-
-  # GET /experiences/new
-  def new
-    @experience = Experience.new
-  end
 
   # GET /experiences/1/edit
   def edit
