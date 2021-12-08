@@ -1,0 +1,11 @@
+- if flash.keys.any?
+  #flash
+    - if flash[:notice]
+      .alert.alert-primary
+        = flash[:notice].html_safe
+    - if flash[:alert]
+      .alert.alert-danger
+        = flash[:alert].html_safe
+    - if flash[:warning]
+      .alert.alert-warning
+        = flash[:warning].html_safe

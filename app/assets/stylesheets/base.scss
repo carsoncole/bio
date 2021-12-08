@@ -1,3 +1,5 @@
+$base-color-striking: #fca311;
+
 * {
   font-weight: 400;
 }
@@ -26,4 +28,23 @@ a {
   font-weight: 500;
 }
 
+#flash {
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  .alert {
+    margin-bottom: 0;
+  }
+}
+
+.alert {
+  font-weight: 400;
+  &.alert-base {
+  }
+  &.alert-danger {
+  }
+  &.alert-warning {
+  }
+}
 
