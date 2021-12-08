@@ -6,7 +6,11 @@ A straightforward personal resume site.
 
 Lists experiences, education, and your availability.
 
-## Authentication
+
+## Installation
+
+
+### Authentication
 
 A simple, single login, using basic authentication. Credentials are stored using Rails encrypted credentials in `config/credentials.yml.enc`
 . Here is an example file:
@@ -17,8 +21,6 @@ A simple, single login, using basic authentication. Credentials are stored using
     password: password123
 ```
 
-## Installation
-
 ### Seeding data
 
 To see sample data, you can seed the database with a random bio and experiences:
@@ -27,5 +29,8 @@ To see sample data, you can seed the database with a random bio and experiences:
 rails db:seed
 ```
 
+### Administration
+
+To edit the site visit `/login`. You will need to enter your authentication credentials.
 
 
