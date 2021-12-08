@@ -1,14 +1,17 @@
 header {
-  margin-bottom: 5em;
+  margin-bottom: 4em;
   color: #fff;
-  h1 {
+  .navbar-brand {
     display: inline-block;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 3em;
-    line-height: 2.2em;
     vertical-align: middle;
     margin-bottom: 0;
+    a {
+      color: #fff;
+      font-weight: 700;
+      font-size: 2em;
+      line-height: 2.2em;
+    }
   }
   .address, .phone, .email {
     display: inline-block;

@@ -1,0 +1,9 @@
+%footer.text-muted
+  - if @signed_in
+    = link_to "Experiences", new_experience_path
+  - else
+    = link_to "Edit", new_experience_path
+  %br
+  Source:
+  = link_to "Bio", "https://github.com/carsoncole/bio"
+

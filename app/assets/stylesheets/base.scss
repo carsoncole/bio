@@ -2,6 +2,22 @@
   font-weight: 400;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .form-group {
   margin-bottom: 1em;
 }
+
+.status {
+  display: inline-block;
+  padding: 0.2em 3em;
+  margin: 0 auto 2em auto;
+  background-color: #ff9933;
+  font-weight: 700;
+  font-size: 1.4em;
+  color: #fff;
+}
+
+

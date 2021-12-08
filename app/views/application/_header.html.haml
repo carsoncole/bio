@@ -1,10 +1,8 @@
 %header
   %nav.navbar.navbar-dark.bg-dark.sticky-top
     .container
-      %h1= Setting&.first&.name
+      
+      .navbar-brand= link_to Setting&.first&.name, root_path
       .address= Setting&.first&.address
       .phone= Setting&.first&.phone
       .email= Setting&.first&.email
-
-      / - if has_basic_credentials?(request)
-      /   Hello

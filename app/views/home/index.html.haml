@@ -1,7 +1,7 @@
 .text-center
   - if Setting&.first&.status.present?
-    .badge.bg-secondary.mb-4
-      %h2 Available
+    .status
+      Available
 
 
 - @experiences.each do |experience|
