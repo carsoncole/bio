@@ -16,3 +16,16 @@ A simple, single login, using basic authentication. Credentials are stored using
     name: John Doe
     password: password123
 ```
+
+## Installation
+
+### Seeding data
+
+To see sample data, you can seed the database with a random bio and experiences:
+
+```ruby
+rails db:seed
+```
+
+
+
