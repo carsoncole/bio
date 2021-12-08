@@ -1,27 +1,35 @@
 .text-center
-  .badge.bg-secondary.mb-4
-    - if Setting&.first.is_available?
-      Available
+  - if Setting&.first&.status.present?
+    .badge.bg-secondary.mb-4
+      %h2 Available
 
 
 - @experiences.each do |experience|
   
   %article
-    .title
-      %h1= experience.title
-      .name
-        - if experience.url.present?
-          = link_to experience.name, experience.url
-        - else
-          = experience.name
+    .row
+      .col-md-12
+        .title
+          %h1= experience.title
+          .name
+            - if experience.url.present?
+              = link_to experience.name, experience.url
+            - else
+              = experience.name
 
-    .description
-      = experience.description
+    .row
+      .col-md-1
+      .col-md-10
+        .description
+          = experience.description
 
-    .period
-      = experience.start_date.strftime('%B %Y')
-      \-
-      - if experience.end_date.present?
-        = experience.end_date.strftime('%B %Y')
-      - else
-        Present
+    .row
+      .col-md-1
+      .col-md-10
+        .period.text-muted
+          = experience.start_date.strftime('%B %Y')
+          \-
+          - if experience.end_date.present?
+            = experience.end_date.strftime('%B %Y')
+          - else
+            Present

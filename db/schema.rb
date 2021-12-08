@@ -28,7 +28,8 @@ ActiveRecord::Schema.define(version: 2021_12_07_184204) do
     t.string "address"
     t.string "email"
     t.string "phone"
-    t.boolean "is_available", default: true
+    t.text "description"
+    t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

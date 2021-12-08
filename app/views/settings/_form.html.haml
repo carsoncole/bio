@@ -6,23 +6,23 @@
         - @setting.errors.full_messages.each do |message|
           %li= message
 
-  .field
+  .form-group
     = f.label :name
     = f.text_field :name
-  .field
+  .form-group
     = f.label :description
     = f.text_field :description
-  .field
+  .form-group
     = f.label :address
     = f.text_field :address
-  .field
+  .form-group
     = f.label :email
     = f.text_field :email
-  .field
+  .form-group
     = f.label :phone
     = f.text_field :phone
-  .field
-    = f.label :is_available
-    = f.check_box :is_available
+  .form-group
+    = f.label :status
+    = f.text_field :status, placeholder: 'Status, ie. Available'
   .actions
     = f.submit 'Save'
