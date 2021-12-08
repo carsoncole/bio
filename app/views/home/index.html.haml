@@ -39,3 +39,8 @@
             = experience.end_date.strftime('%B %Y')
           - else
             Present
+
+        .action
+          = link_to "Edit", edit_experience_path(experience)
+        .action
+          = button_to "Destroy", experience_path(experience), class: 'btn btn-sm btn-danger', method: :delete
