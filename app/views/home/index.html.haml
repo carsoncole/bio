@@ -1,7 +1,7 @@
 .text-center
   - if Setting&.first&.status.present?
     .status
-      Available
+      = Setting&.first&.status
 
 .row
   .col-md-2

@@ -6,23 +6,31 @@
         - @setting.errors.full_messages.each do |message|
           %li= message
 
-  .form-group
-    = f.label :name
-    = f.text_field :name, class: 'form-control'
+  .row
+    .col-md-7
+      .form-group
+        = f.label :name
+        = f.text_field :name, class: 'form-control', placeholder: 'Name'
   .form-group
     = f.label :description
-    = f.text_field :description, class: 'form-control'
+    = f.text_field :description, class: 'form-control', placeholder: 'Description'
   .form-group
     = f.label :address
-    = f.text_field :address, class: 'form-control'
-  .form-group
-    = f.label :email
-    = f.text_field :email, class: 'form-control'
-  .form-group
-    = f.label :phone
-    = f.text_field :phone, class: 'form-control'
-  .form-group
-    = f.label :status
-    = f.text_field :status, class: 'form-control', placeholder: 'Status, ie. Available'
-  .actions
+    = f.text_field :address, class: 'form-control', placeholder: 'Address'
+  .row
+    .col-md-7
+      .form-group
+        = f.label :email
+        = f.text_field :email, class: 'form-control', placeholder: 'Email'
+  .row
+    .col-md-7
+      .form-group
+        = f.label :phone
+        = f.text_field :phone, class: 'form-control', placeholder: 'Phone'
+  .row
+    .col-md-7
+      .form-group
+        = f.label :status
+        = f.text_field :status, class: 'form-control', placeholder: 'Status, ie. Available'
+  .actions.mt-4
     = f.submit 'Save', class: 'btn btn-primary'
