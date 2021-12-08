@@ -13,8 +13,11 @@
   %b Phone:
   = @setting.phone
 %p
-  %b Is available:
-  = @setting.is_available
+  %b Description:
+  = @setting.description
+%p
+  %b Status:
+  = @setting.status
 
 = link_to 'Edit', edit_setting_path(@setting)
 \|
