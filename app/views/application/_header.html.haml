@@ -1,8 +1,8 @@
 %header
-  %nav.navbar.navbar-dark.bg-dark.sticky-top
-    .container
-      
-      .navbar-brand= link_to Setting&.first&.name|| 'Your name here', root_path
-      .address= Setting&.first&.address || '123 Main Street, Anytown, 11111 USA'
-      .phone= Setting&.first&.phone || '+1 206-555-1212'
-      .email= Setting&.first&.email || 'john.doe@example.com'
+  .container
+    
+    .title= link_to Setting&.first&.name|| 'Your name here', root_path
+    .row
+      .col-md-2
+      .col-md-8
+        .bio-description= Setting&.first&.description

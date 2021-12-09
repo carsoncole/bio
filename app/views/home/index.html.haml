@@ -3,46 +3,52 @@
     .status
       = Setting&.first&.status
 
-.row
-  .col-md-2
-  .col-md-8
-    .bio-description
-      = Setting&.first&.description
+
+#contact.section
+  %h2 Contact
+  .phone= Setting&.first&.phone || '+1 206-555-1212'
+  .email= Setting&.first&.email || 'john.doe@example.com'
+  .address= Setting&.first&.address || '123 Main Street, Anytown, 11111 USA'
 
 
-%h2.section Experience
 
-- @experiences.each do |experience|
-  
-  %article
-    .row
-      .col-md-12
-        .title
-          %h1= experience.title
-          .name
-            - if experience.url.present?
-              = link_to experience.name, experience.url
+#experience.section
+  %h2 Experience
+
+  - @experiences.each do |experience|
+    
+    %article
+      .row
+        .col-md-12
+          .title
+            %h1= experience.title
+            .name
+              - if experience.url.present?
+                = link_to experience.name, experience.url
+              - else
+                = experience.name
+
+      .row
+        .col-md-3
+        .col-md-9
+          .description
+            = experience.description
+
+      .row
+        .col-md-3
+        .col-md-9
+          .period.text-muted
+            = experience.start_date.strftime('%B %Y')
+            \-
+            - if experience.end_date.present?
+              = experience.end_date.strftime('%B %Y')
             - else
-              = experience.name
+              Present
+          - if @signed_in
+            .action
+              = link_to "Edit", edit_experience_path(experience)
+            .action
+              = button_to "Destroy", experience_path(experience), class: 'btn btn-sm btn-danger', method: :delete
 
-    .row
-      .col-md-3
-      .col-md-9
-        .description
-          = experience.description
-
-    .row
-      .col-md-3
-      .col-md-9
-        .period.text-muted
-          = experience.start_date.strftime('%B %Y')
-          \-
-          - if experience.end_date.present?
-            = experience.end_date.strftime('%B %Y')
-          - else
-            Present
-        - if @signed_in
-          .action
-            = link_to "Edit", edit_experience_path(experience)
-          .action
-            = button_to "Destroy", experience_path(experience), class: 'btn btn-sm btn-danger', method: :delete
+#education.section
+  %h2 Education
