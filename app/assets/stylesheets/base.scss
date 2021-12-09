@@ -9,7 +9,7 @@ a {
   text-decoration: none !important;
 }
 
-#contact, #experience, #education {
+#contact, #experience, #education, #status {
   &.section {
     margin-bottom: 4rem;
     h2 {
@@ -22,16 +22,6 @@ a {
 
 .form-group {
   margin-bottom: 1em;
-}
-
-.status {
-  display: inline-block;
-  padding: 0.2em 3em;
-  margin: 0 auto 2em auto;
-  background-color: #ff9933;
-  font-weight: 700;
-  font-size: 1.4em;
-  color: #fff;
 }
 
 #flash {

@@ -1,14 +1,13 @@
 header {
   margin-top: 0;
   padding-top: 3em;
-  padding-bottom: 2em;
+  padding-bottom: 3.5rem;
   text-align: center;
   background-color: #161617;
   margin-bottom: 4em;
   color: #fff;
   .title {
     vertical-align: middle;
-    margin-bottom: 0;
     a {
       text-align: center;
       color: #fff;
@@ -19,13 +18,8 @@ header {
   }
   .bio-description {
     font-size: 1.5rem;
-    line-height: 1.9em;
+    line-height: 2rem;
     font-weight: 400;
     margin-top: 0.5em;
-  }
-  .phone, .email {
-    display: inline-block;
-    margin-right: 1rem;
-    font-size: 1em;
   }
 }
