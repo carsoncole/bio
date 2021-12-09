@@ -46,6 +46,6 @@ class SettingsController < InternalController
 
     # Only allow a list of trusted parameters through.
     def setting_params
-      params.require(:setting).permit(:name, :description, :address, :email, :phone, :status)
+      params.require(:setting).permit(:name, :description, :address, :email, :phone, :status, :education)
     end
 end
