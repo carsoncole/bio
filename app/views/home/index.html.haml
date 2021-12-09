@@ -2,9 +2,13 @@
   .row
     .col-md-12
       %h2 Status
-      - if Setting&.first&.status.present?
-        .status
-          = Setting&.first&.status
+      .row
+        .col-md-5
+          .content
+
+            - if Setting&.first&.status.present?
+              .status
+                = Setting&.first&.status
 
 
 
@@ -12,9 +16,12 @@
   .row
     .col-md-12
       %h2 Contact
-      .phone= Setting&.first&.phone || '+1 206-555-1212'
-      .email= Setting&.first&.email || 'john.doe@example.com'
-      .address= Setting&.first&.address || '123 Main Street, Anytown, 11111 USA'
+      .row
+        .col-md-5
+          .content
+            .phone= Setting&.first&.phone || '+1 206-555-1212'
+            .email= Setting&.first&.email || 'john.doe@example.com'
+            .address= Setting&.first&.address || '123 Main Street, Anytown, 11111 USA'
 
 
 
