@@ -1,44 +1,42 @@
-#status.section
-  .row
-    .col-md-12
-      %h2 Status
-      .row
-        .col-md-5
-          .content
+.row
+  .col-md-6
+    #status.section
+      .content
+        %h1 Status
+        - if Setting&.first&.status.present?
+          .status
+            = Setting&.first&.status
 
-            - if Setting&.first&.status.present?
-              .status
-                = Setting&.first&.status
-
-
-
-#contact.section
-  .row
-    .col-md-12
-      %h2 Contact
-      .row
-        .col-md-5
-          .content
-            .phone= Setting&.first&.phone || '+1 206-555-1212'
-            .email= Setting&.first&.email || 'john.doe@example.com'
-            .address= Setting&.first&.address || '123 Main Street, Anytown, 11111 USA'
+  .col-md-6
+    #contact.section
+      .content
+        %h1 Contact
+        .phone= Setting&.first&.phone || '+1 206-555-1212'
+        .email= Setting&.first&.email || 'john.doe@example.com'
+        .address= Setting&.first&.address || '123 Main Street, Anytown, 11111 USA'
 
 
 
 #experience.section
-  %h2 Experience
+  %h1 Experience
   - @experiences.each do |experience|
     
     %article
       .row
         .col-md-12
           .title
-            %h1= experience.title
+            %h2= experience.title
             .name
               - if experience.url.present?
                 = link_to experience.name, experience.url
               - else
                 = experience.name
+
+      - if experience.skills.present?
+        .row
+          .col-md-3
+          .col-md-9
+            .skills= experience.skills
 
       .row
         .col-md-3

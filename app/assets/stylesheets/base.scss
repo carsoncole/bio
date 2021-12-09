@@ -4,25 +4,46 @@ $base-color-striking: #fca311;
   font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+body {
+  background-color: #efefef !important;
+}
+
 a {
   text-decoration: none !important;
 }
 
-#contact, #experience, #education, #status {
+#experience, #education, #status, #contact {
+  .content {
+    background-color: #fff;
+    padding: 1.5rem 2rem;
+  }
+}
+
+#experience, #education {
   &.section {
     margin-bottom: 4rem;
-    h2 {
+    h1 {
       text-transform: uppercase;
-      font-size: 2.3rem;
+      font-size: 2.5rem;
       margin-bottom: 1.9rem;
     }
   }
   .content {
-    background-color: #efefef;
-    padding: 1rem 2rem;
     font-weight: 500;
   }
 }
+
+#status, #contact {
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2em;
+  }
+}
+
+#experience {
+  margin-top: 5rem;
+}
+
 
 .form-group {
   margin-bottom: 1em;

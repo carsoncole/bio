@@ -37,6 +37,6 @@ class ExperiencesController < InternalController
     end
 
     def experience_params
-      params.require(:experience).permit(:title, :name, :url, :start_date, :end_date, :description)
+      params.require(:experience).permit(:title, :name, :url, :skills, :start_date, :end_date, :description)
     end
 end
