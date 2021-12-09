@@ -1,5 +1,5 @@
 article {
-  border-top: 4px solid #efefef;
+  border-top: 4px solid #444;
   margin-bottom: 4em;
   line-height: 1.777rem;
   .title {
@@ -7,31 +7,31 @@ article {
   }
   h1 {
     display: inline-block;
-    padding-top: 0.5em;
+    padding-top: 1em;
     margin-right: 0.5em;
-    font-size: 1.8em;
-    font-weight: 600;
+    font-size: 1.7em;
+    font-weight: 500;
     text-transform: uppercase;
   }
   .name {
     display: inline-block;
     line-height: 1.2em;
     text-transform: uppercase;
-    font-weight: 400;
-    font-size: 1.8em;
+    font-size: 1.7em;
     a {
       text-decoration: none;
+      font-weight: 500;
     }
   }
   .description {
 
   }
   .period {
-    margin-top: 0.5em;
+    margin-top: 1em;
     display: inline-block;
   }
   .action {
     display: inline-block;
-    margin-left: 2em;
+    margin-left: 1.5em;
   }
 }
