@@ -20,7 +20,7 @@ class ExperiencesController < InternalController
 
   def update
     if @experience.update(experience_params)
-      redirect_to @experience, notice: "Experience was successfully updated."
+      redirect_to root_path, notice: "Experience was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end

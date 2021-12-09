@@ -25,7 +25,7 @@ class ExperiencesControllerTest < ActionDispatch::IntegrationTest
 
   test "should update experience" do
     patch experience_url(@experience), params: { experience: { description: @experience.description, end_date: @experience.end_date, start_date: @experience.start_date, title: @experience.title } }
-    assert_redirected_to experience_url(@experience)
+    assert_redirected_to root_url
   end
 
   test "should destroy experience" do
