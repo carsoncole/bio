@@ -1,12 +1,13 @@
+- if @signed_in
+  .internal-menu
+    = link_to "Home", root_path
+    \|
+    = link_to "Experiences", new_experience_path
+    \|
+    = link_to "Details", edit_setting_path(1)
+    / \|
+    / = link_to "Logout", logout_path
+
 %footer.text-muted
-  - if @signed_in
-    .internal-menu
-      = link_to "Home", root_path
-      \|
-      = link_to "Experiences", new_experience_path
-      \|
-      = link_to "Details", edit_setting_path(1)
-      / \|
-      / = link_to "Logout", logout_path
   Source:
   = link_to "Github/Bio", "https://github.com/carsoncole/bio", target: '_blank'
