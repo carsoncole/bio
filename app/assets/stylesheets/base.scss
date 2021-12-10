@@ -15,13 +15,23 @@ a {
 #experience, #education, #status, #contact {
   .content {
     background-color: #fff;
-    padding: 1.5rem 2rem;
+    padding: 3.5rem 2rem 2rem 2rem;
+  }
+  &.section {
+    margin-bottom: 2rem;
+  }
+}
+
+.content {
+  i.far, i.fas {
+    font-size: 4rem;
+    position: absolute;
+    margin-top: -6rem;
   }
 }
 
 #experience {
   &.section {
-    margin-bottom: 4rem;
     h1 {
       text-transform: uppercase;
       font-size: 2.5rem;

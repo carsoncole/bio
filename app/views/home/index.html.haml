@@ -2,6 +2,7 @@
   .col-md-6
     #status.section
       .content
+        %i.far.fa-check-square
         %h1 Status
         - if Setting&.first&.status.present?
           .status
@@ -10,6 +11,7 @@
   .col-md-6
     #contact.section
       .content
+        %i.far.fa-address-card
         %h1 Contact
         .phone= Setting&.first&.phone || '+1 206-555-1212'
         .email= Setting&.first&.email || 'john.doe@example.com'
@@ -65,5 +67,6 @@
     .col-md-12
       #education.section
         .content
+          %i.fas.fa-user-graduate
           %h1 Education
           = Setting&.first&.education
