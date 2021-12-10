@@ -1,6 +1,16 @@
 %head
-  %title= Setting&.first&.name
+  %title
+    - if Setting&.first&.name.present?
+      = Setting.first.name
+      - if Setting&.first&.meta_title.present?
+        \|
+        = Setting.first.meta_title
+    - else
+      Bio
+  - if Setting&.first&.meta_description.present?
+    %meta{ name: "description",content: Setting.first.meta_description}
   %meta(name="viewport" content="width=device-width,initial-scale=1")
+  %meta(charset="UTF-8")
   = csrf_meta_tags
   = csp_meta_tag
 
