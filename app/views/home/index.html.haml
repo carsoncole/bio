@@ -79,3 +79,11 @@
           %h1 Open Source Projects
           = Setting&.first&.open_source
 
+- if Setting&.first&.resume_url.present?
+  .row
+    .col-md-12
+      - link_text = Setting&.first&.name || ""
+      - link_text += ' Resume'
+      .resume-link
+        = link_to link_text, Setting&.first&.resume_url
+        %i.far.fa-arrow-alt-circle-down
