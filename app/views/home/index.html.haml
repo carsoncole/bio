@@ -62,12 +62,20 @@
               .action
                 = button_to "Destroy", experience_path(experience), class: 'btn btn-sm btn-danger', method: :delete
 
-- if Setting&.first&.education.present?
-  .row
-    .col-md-12
+
+.row
+  - if Setting&.first&.education.present?
+    .col-md-6
       #education.section
         .content
           %i.fas.fa-user-graduate
           %h1 Education
           = Setting&.first&.education
+  - if Setting&.first&.open_source.present?
+    .col-md-6
+      #open_source.section
+        .content
+          %i.fas.fa-code
+          %h1 Open Source Projectss
+          = Setting&.first&.open_source
 

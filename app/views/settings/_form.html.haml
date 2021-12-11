@@ -40,6 +40,11 @@
   .row
     .col-md-7
       .form-group
+        = f.label :open_source
+        = f.rich_text_area :open_source, class: 'form-control', placeholder: 'List open source projects'
+  .row
+    .col-md-7
+      .form-group
         = f.label :meta_title
         = f.text_field :meta_title, class: 'form-control', placeholder: 'Meta tag used for page title'
   .row
