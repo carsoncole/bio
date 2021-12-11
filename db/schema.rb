@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_10_003803) do
+ActiveRecord::Schema.define(version: 2021_12_11_173741) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2021_12_10_003803) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "skills"
+    t.index ["end_date", "start_date"], name: "index_experiences_on_end_date_and_start_date", order: { start_date: :desc }
   end
 
   create_table "settings", force: :cascade do |t|
