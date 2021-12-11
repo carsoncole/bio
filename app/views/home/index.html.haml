@@ -85,5 +85,5 @@
       - link_text = Setting&.first&.name || ""
       - link_text += ' Resume'
       .resume-link
-        = link_to link_text, Setting&.first&.resume_url
+        = link_to link_text, Setting&.first&.resume_url, target: '_blank'
         %i.far.fa-arrow-alt-circle-down
