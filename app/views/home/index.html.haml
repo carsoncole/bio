@@ -82,8 +82,6 @@
 
 .row
   .col-md-12
-    - link_text = Setting&.first&.name || ""
-    - link_text += ' Resume'
     .resume-link
-      = link_to link_text, resume_path(format: :pdf), target: '_blank'
+      = link_to "Download Resume", resume_path(format: :pdf), target: '_blank'
       %i.far.fa-arrow-alt-circle-down
