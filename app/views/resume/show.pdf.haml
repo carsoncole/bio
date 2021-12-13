@@ -23,20 +23,21 @@
   - @experiences.each do |experience|
     %article
       .title
-        %h2= experience.title
+        %h3= experience.title
         .name
           - if experience.url.present?
             = link_to experience.name, experience.url
           - else
             = experience.name
 
-      - if experience.skills.present?
-        .skills= experience.skills
+      .content
+        - if experience.skills.present?
+          .skills= experience.skills
 
         .description
           = experience.description
 
-        .period.text-muted
+        .period
           = experience.start_date.strftime('%B %Y')
           \-
           - if experience.end_date.present?
@@ -57,3 +58,8 @@
     .content
       = Setting&.first&.open_source
 
+.status
+  Generated:
+  = Time.now
+  \|
+  = link_to "Generate current version", resume_path(format: :pdf)
