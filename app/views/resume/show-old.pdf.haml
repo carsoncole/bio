@@ -1,0 +1,34 @@
+%h1= Setting&.first&.name
+
+.description= Setting&.first&.description
+
+%hr
+
+#experience
+
+  %h1 Experience
+  - @experiences.each do |experience|
+    %article
+      %h1
+        .title= experience.title
+        \|
+        .name= experience.name
+
+      - if experience.skills.present?
+        .skills= experience.skills
+
+      - if experience.description.present?
+        %p.description= experience.description
+
+      .period
+        = experience.start_date.strftime('%B %Y')
+        \-
+        - if experience.end_date.present?
+          = experience.end_date.strftime('%B %Y')
+        - else
+          Present
+
+
+%p.generated
+  Generated:
+  = Time.now

@@ -1,17 +1,16 @@
 class ResumeController < PublicController
 
-  def generate
-    format.pdf do
-      render pdf: 'Things.pdf',
-             locals: { things: @things },
-             disposition: 'inline',
-             template: 'layouts/application.html.haml',
-             show_as_html: true,
-             margin: { top: 10,
-                       bottom: 10,
-                       left: 0,
-                       right: 0 }
+  def show
+    @experiences = Experience.all
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "resume",
+        type: 'application/pdf',
+        page_size: 'Letter',
+        template: "resume/show",
+        layout: "pdf"
+      end
     end
   end
-
 end
