@@ -34,3 +34,6 @@ rails db:seed
 To edit the site visit `/login`. You will need to enter your authentication credentials.
 
 
+### Potential issues
+
+There is the possibility for missing dependencies for `wkhtmltopdf-binary`. This code has been tested on Ubuntu 20.04. It required the installation of `libjpeg-dev`, `libxrender-dev`, `libfontconfig-dev` and `libfontconfig-dev`.
